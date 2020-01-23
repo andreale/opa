@@ -51,3 +51,4 @@ group :test do
 end
 
 gem 'mechanize'
+gem 'font-awesome-rails'

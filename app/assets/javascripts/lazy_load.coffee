@@ -1,6 +1,6 @@
 initPage = ->
 
-  for card_name, idx in ['erdnuss', 'foo', 'bar']
+  for card_name, idx in ['erdnuss', 'weather', 'foobar']
     fun = (cn) ->
       $.ajax
         url: "/cards/#{cn}"
@@ -8,6 +8,6 @@ initPage = ->
         success: (html, blah) ->
           $("#card_#{cn}").html html
           return
-    fun(card_name) # preserve reference to card_name
+    fun(card_name)
 
 document.addEventListener('turbolinks:load', initPage) # this set the trigger for page changes
