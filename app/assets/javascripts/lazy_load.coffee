@@ -1,6 +1,6 @@
 initPage = ->
 
-  for card_name, idx in ['erdnuss', 'weather', 'foobar']
+  for card_name, idx in ['erdnuss', 'weather', 'well_com']
     fun = (cn) ->
       $.ajax
         url: "/cards/#{cn}"
