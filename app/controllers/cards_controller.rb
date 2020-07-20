@@ -5,10 +5,11 @@ class CardsController < ApplicationController
     @erdnuss_tag_text = ErdnussScraper.new.get_erdnuss_tag
   end
 
-  def weather
-    @weather = WeatherForecaster.new.get_weather
+  def well_com
+    @well_com_menu = WellComScraper.new.get_well_com_menu
   end
 
-  def foobar
+  def weather
+    @weather = WeatherForecaster.new.get_weather
   end
 end
