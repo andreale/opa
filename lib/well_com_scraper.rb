@@ -2,7 +2,7 @@ class WellComScraper
   ADDRESS = 'https://well-com-ch-sodexo.com/'
   DAY_RXP = /.+Angebot am\s+/i
 
-  INCLUDE_MARKETING = false
+  INCLUDE_MARKETING = true
 
   def get_well_com_menu
     # puts '----'
