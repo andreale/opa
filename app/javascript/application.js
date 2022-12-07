@@ -1,3 +1,5 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
+
+// Disabled because of errors in js console:
+// import "@hotwired/turbo-rails"
+// import "controllers"

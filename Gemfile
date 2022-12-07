@@ -70,3 +70,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "pg", "~> 1.4"
+
+gem "haml-rails", "~> 2.0"
+
+gem "mechanize", "~> 2.8"
+
+gem "font-awesome-rails", "~> 4.7"

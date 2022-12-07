@@ -1,0 +1,29 @@
+.container
+  .row.mb-3
+    .col-sm-4.themed-grid-col.bg-success.shadow.p-3.rounded#card_erdnuss
+      %p
+        %h5 Erdnuss tag ist:
+        = @erdnuss_tag_text
+
+    .col-sm-4.themed-grid-col.bg-primary.shadow.p-3.rounded#card_weather
+      %p
+        %h5 Das Wetter:
+
+        = image_tag @weather[:image] rescue nil
+        %b= @weather[:status]
+        %br
+        %b= "#{@weather[:temp_current]}°"
+        |
+        = "(Feels like #{@weather[:temp_feels_like]}°)"
+        %br
+        = fa_icon 'long-arrow-up', text: "#{@weather[:temp_min]}°", style: 'color: #20c997;'
+        |
+        = fa_icon 'long-arrow-down', text: "#{@weather[:temp_max]}°", style: 'color: #f06595;'
+
+    .col-sm-4.themed-grid-col.bg-info.shadow.p-3.rounded#card_well_com
+      %h5 Well-com Menu:
+      - @well_com_menu.each do |day, items|
+        %b= "#{day}:"
+        %br
+        = raw items.join('<br>')
+        %br
